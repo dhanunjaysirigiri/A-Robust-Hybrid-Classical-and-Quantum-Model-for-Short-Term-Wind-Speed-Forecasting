@@ -1,0 +1,9 @@
+django==2.1.7
+pandas
+numpy
+xlwt 
+nltk
+seaborn
+matplotlib
+scikit-learn
+

@@ -1,0 +1,14 @@
+py manage.py runserver 
+
+pip install -r requirements.txt --user
+
+service provider
+
+Admin
+Admin
+
+
+remote user
+
+abc123
+abc123

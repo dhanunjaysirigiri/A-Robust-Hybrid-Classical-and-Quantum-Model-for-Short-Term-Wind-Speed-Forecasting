@@ -1,0 +1,145 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF WIND SPEED FORCASTING DETECTION!!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1024" align="center">
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Fid</div>
+                                    </div></td>
+                                    <td><input type="text" name="Fid"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter Latitude</div></td>
+                                    <td><input type="text" name="Latitude"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Langitude</div>
+                                    </div></td>
+                                    <td><input type="text" name="Langitude"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter Fdate</div></td>
+                                    <td><input type="text" name="Fdate"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Wind_Speed</div></td>
+                                    <td><input type="text" name="Wind_Speed"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter First_Indicator</div></td>
+                                    <td><input type="text" name="First_Indicator"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4"><span class="style2">Enter </span>RAIN</div></td>
+                                    <td><input type="text" name="RAIN"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter Second_Indicator</div></td>
+                                    <td><input type="text" name="Second_Indicator"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Max_Temp</div></td>
+                                    <td><input type="text" name="Max_Temp"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter Third_Indicator	</div></td>
+                                    <td><input type="text" name="Third_Indicator"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Min_temp</div></td>
+                                    <td><input type="text" name="Min_temp"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter Min_grass_temp</div></td>
+                                    <td><input type="text" name="Min_grass_temp"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FFFFFF">&nbsp;</td>
+                                    <td bgcolor="#FFFFFF">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="289" height="44" bgcolor="#FFFFFF">&nbsp;</td>
+                                    <td width="222"><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                    <td width="318">&nbsp;</td>
+                                    <td width="175">&nbsp;</td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="818" height="49" border="0" align="center" >
+                                    <tr><td width="574" bgcolor="#FF0000"><div align="center"><span class="style6">Prediction Of Wind Forcasting Detection Type </span> <span class="style4">:: ---&gt;</span></div></td>
+
+
+
+                                      <td width="234" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center"><strong>{{objs}}</strong></div></td>
+                                    </tr>
+                      </table>
+
+
+
+                            </div>
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
